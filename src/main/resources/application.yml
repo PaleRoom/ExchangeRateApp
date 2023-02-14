@@ -1,0 +1,6 @@
+server:
+  port: '7071'
+app:
+  exchange:
+    enabled: true
+

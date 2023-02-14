@@ -1,0 +1,30 @@
+server:
+  servlet:
+    context-path: /
+  port: ${SERV_PORT:7071}
+
+management:
+  health:
+    redis:
+      enabled: false
+  server:
+    port: 9091
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include: health,prometheus
+appl:
+  groupId: group2
+app:
+  healthCheckMsg: ${HEALTH_MSG:OK}
+
+spring:
+  kafka:
+    producer:
+      properties:
+        spring:
+          json:
+            add:
+              type:
+                headers: false
