@@ -8,7 +8,7 @@ management:
     redis:
       enabled: false
   server:
-    port: 9091
+    port: 9090
   endpoints:
     web:
       base-path: /

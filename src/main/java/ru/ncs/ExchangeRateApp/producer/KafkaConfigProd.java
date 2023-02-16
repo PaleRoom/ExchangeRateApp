@@ -16,7 +16,7 @@ import org.springframework.kafka.support.serializer.JsonSerializer;
 import ru.ncs.ExchangeRateApp.consumer.Message;
 import ru.ncs.ExchangeRateApp.response.ExchangeResponse;
 
-//@Configuration
+@Configuration
 public class KafkaConfigProd {
     private final static String SERVER = "localhost:9092";
 

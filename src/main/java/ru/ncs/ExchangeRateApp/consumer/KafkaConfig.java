@@ -12,7 +12,7 @@ import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
 import org.springframework.kafka.support.serializer.JsonDeserializer;
 
-//@Configuration
+@Configuration
 public class KafkaConfig {
     private static final String SERVER = "localhost:9092";
     @Value("${appl.groupId}")

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import ru.ncs.ExchangeRateApp.producer.Producer;
 import ru.ncs.ExchangeRateApp.response.ExchangeResponse;
 
-//@Service
+@Service
 @RequiredArgsConstructor
 @Slf4j
 public class Consumer {
