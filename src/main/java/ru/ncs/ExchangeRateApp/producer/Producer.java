@@ -6,7 +6,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 import ru.ncs.ExchangeRateApp.response.ExchangeResponse;
 
-@Service
+//@Service
 @RequiredArgsConstructor
 @Slf4j
 public class Producer {

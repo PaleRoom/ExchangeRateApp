@@ -16,6 +16,7 @@ management:
         include: health,prometheus
 appl:
   groupId: group2
+
 app:
   healthCheckMsg: ${HEALTH_MSG:OK}
 

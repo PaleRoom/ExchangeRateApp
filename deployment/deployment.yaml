@@ -7,7 +7,7 @@ metadata:
 spec:
   strategy:
     type: RollingUpdate
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: exchangerateapp-app
@@ -22,26 +22,26 @@ spec:
           ports:
             - containerPort: 7071
               name: app
-            - containerPort: 9089
+            - containerPort: 9090
               name: actuator
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: "local"
           livenessProbe:
             httpGet:
-              port: 9089
+              port: 9090
               path: /health
             failureThreshold: 1
-            periodSeconds: 10
+            periodSeconds: 100
           readinessProbe:
             httpGet:
               port: 7071
               path: /healthcheck
             failureThreshold: 1
-            periodSeconds: 10
+            periodSeconds: 100
           startupProbe:
             httpGet:
               port: 7071
               path: /healthcheck
             failureThreshold: 30
-            periodSeconds: 10
+            periodSeconds: 100

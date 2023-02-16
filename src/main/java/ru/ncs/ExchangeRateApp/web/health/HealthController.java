@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HealthController {
+
     @Value("${app.healthCheckMsg}")
     private String msg;
 
